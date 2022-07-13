@@ -255,8 +255,8 @@ class Bookings extends CI_Controller
         return ($count==$excp_count);
     }
     private function sendEmail($to,$subject,$body){
-        //$this->load->model("settings/mdl_settings");
-        $myEmail = "test@gmx.de";//$this->mdl_settings->get("smtp_mail_from");
+        $this->load->model("mdl_Settings");
+        $myEmail = $this->mdl_settings->get("smtp_mail_from");
          $header = 
         'From: '.$myEmail . "\r\n" .
         'Reply-To: '.$myEmail . "\r\n" .
