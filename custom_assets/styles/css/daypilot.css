@@ -1,0 +1,87 @@
+      p, body, td { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 10pt; }
+        body { padding: 0px; margin: 0px; background-color: #ffffff; }
+        a { color: #1155a3; }
+        .space { margin: 10px 0px 10px 0px; }
+        .header { background: #003267; background: linear-gradient(to right, #011329 0%,#00639e 44%,#011329 100%); padding:20px 10px; color: white; box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75); }
+        .header a { color: white; }
+        .header h1 a { text-decoration: none; }
+        .header h1 { padding: 0px; margin: 0px; }
+        .main { padding: 10px; margin-top: 10px; }
+
+        body, input, button, select {
+            font-size: 14px;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        .toolbar {
+            margin: 10px 0px;
+        }
+
+        .toolbar button {
+            padding: 5px 15px;
+        }
+
+        .icon {
+            font-size: 14px;
+            text-align: center;
+            line-height: 14px;
+            vertical-align: middle;
+
+            cursor: pointer;
+        }
+
+        .toolbar-separator {
+            width: 1px;
+            height: 28px;
+            /*content: '&nbsp;';*/
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: #ccc;
+            margin-bottom: -8px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .scheduler_default_rowheader_inner
+        {
+            border-right: 1px solid #ccc;
+        }
+        .scheduler_default_rowheadercol2
+        {
+            background: White;
+        }
+        .scheduler_default_rowheadercol2 .scheduler_default_rowheader_inner
+        {
+            top: 2px;
+            bottom: 2px;
+            left: 2px;
+            background-color: transparent;
+            border-left: 5px solid #38761d; /* green */
+            border-right: 0px none;
+        }
+        .status_dirty.scheduler_default_rowheadercol2 .scheduler_default_rowheader_inner
+        {
+            border-left: 5px solid #cc0000; /* red */
+        }
+        .status_cleanup.scheduler_default_rowheadercol2 .scheduler_default_rowheader_inner
+        {
+            border-left: 5px solid #e69138; /* orange */
+        }
+
+        .area-menu {
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 0.5 1.5 L 5 6.5 L 9.5 1.5' style='fill:none;stroke:%23999999;stroke-width:2;stroke-linejoin:round;stroke-linecap:butt' /%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 3px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .area-menu:hover {
+            opacity: 1;
+        }
