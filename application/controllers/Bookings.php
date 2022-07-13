@@ -226,6 +226,9 @@ class Bookings extends CI_Controller
         $this->load->view("step5-finish",$data);
     }
     public function info(){
+        if(empty($_SESSION["meta"]["user"])){
+            redirect("bookings/index");
+        }
         $this->load->view("step5-info");
     }
     
@@ -256,7 +259,7 @@ class Bookings extends CI_Controller
     }
     private function sendEmail($to,$subject,$body){
         $this->load->model("mdl_Settings");
-        $myEmail = $this->mdl_settings->get("smtp_mail_from");
+        $myEmail = $this->mdl_Settings->get("smtp_mail_from");
          $header = 
         'From: '.$myEmail . "\r\n" .
         'Reply-To: '.$myEmail . "\r\n" .
