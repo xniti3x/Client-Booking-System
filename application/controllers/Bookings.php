@@ -156,7 +156,7 @@ class Bookings extends CI_Controller
                     'invoice_time_created' => $tnow,
                     'invoice_date_modified' => $dtnow,
                     'invoice_date_due' => $dnow,
-                    'invoice_number' => "RES".$res_group["invoice_group_next_id"],
+                    'invoice_number' => "RES-".$res_group["invoice_group_next_id"],
                     'invoice_url_key'=> $this->get_url_key(),
                     'creditinvoice_parent_id'=> 0,
                     'payment_method' => 0
