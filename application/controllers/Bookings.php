@@ -193,15 +193,17 @@ class Bookings extends CI_Controller
                     Sehr geehrte Damen und Herren,<br>
                     wir freuen uns ganz herzlich dass sie bei uns übernachten möchten und bestätigen die Reservierung wie folgt:<br><br>
                     Zeitraum: '.date('d-m-Y',strtotime($_SESSION["meta"]["start"]))." bis ".date('d-m-Y',strtotime($_SESSION["meta"]["ende"])).'<br>';
+                    
                     foreach($_SESSION["meta"]["rooms"] as $room){	
                     $table.='<br>'.$room["kategorie"].' - '.$room["selc_preis"].'€/Nacht ohne Frühstück';
+                    }
                     $table.="<br><br><br>Mit freundlichen Grüßen<br>
                     ".$data["user"]["user_company"]."<br>
                     ".$data["user"]["user_address_1"]."<br>
                     ".$data["user"]["user_zip"]." ".$data["user"]["user_city"]."<br>
                     ".$data["user"]["user_phone"]."<br>
                     ".$data["user"]["user_email"];
-                    }
+                    
 					
 					$sub='=?UTF-8?B?' . base64_encode('Reservierungsbestätigung') . '?=';
                     $this->sendEmail($company["email"],$sub,base64_encode($table));
