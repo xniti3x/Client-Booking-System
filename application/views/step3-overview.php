@@ -47,7 +47,7 @@
 										<thead class="bg-light">
 										  <tr>
 											<th>Kategorie</th>
-											<th>Beschreibung</th>
+										<!--	<th>Beschreibung</th> -->
 											<th>Nächte</th>
 											<th>Preis</th>
 											<th>Summe</th>
@@ -67,7 +67,7 @@
 												</div>
 											  <div class="d-flex align-items-center"></div>
 											</td>
-											<td><p class="fw-normal mb-1"><?php echo $room["beschreibung"]; ?></p></td>
+											<!-- <td><p class="fw-normal mb-1"><?php echo $room["beschreibung"]; ?></p></td> -->
 											<td><p class="fw-normal mb-1"><?php echo $nights; ?></p></td>
 											<td><p class="fw-normal mb-1"><?php echo $preis=($room["selc_preis"]); ?></p></td>
 											
@@ -79,7 +79,7 @@
 											<td><p class="fw-normal mb-1">-</p></td>
 											<td><div class="form-check">-</div></td>
 											<td><div class="form-check">-</div></td>
-											<td><div class="form-check">-</div></td>
+											<!-- <td><div class="form-check">-</div></td> -->
 											<td><?php echo $total; ?> €</td>
 										  </tr>
 										</tbody>
