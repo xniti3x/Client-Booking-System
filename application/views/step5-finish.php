@@ -16,7 +16,7 @@
 <p class="card-body" align="center">
 	<img src="<?php echo base_url(); ?>/custom_assets/wizard_styles/img/check.png" width="32px" /> <br>
 	Vielen Dank, Ihre Buchung war erfolgreich !!!<br>
-	In Kürze erhalten Sie eine Bestätigungsmail unter, <u><?php echo $_SESSION["meta"]["user"]["email"]; ?></u><br><br>
+	In Kürze erhalten Sie eine Bestätigungsmail unter, <u><?php echo $_SESSION["meta"]["user"]["email"]; ?></u><br> sollte innerhalb 5min keine Bestätigung eingehen, bitten wir Sie telefonisch kontakt aufzunehmen.<br>
 	<a href="<?php echo site_url("bookings/index"); ?>" class="btn btn-info">NEU BUCHUNG</a> </p>
 
 	<table class="table table-striped" width="100%" cellpadding="5px" cellspacing="15px">
