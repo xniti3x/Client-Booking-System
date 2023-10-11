@@ -62,7 +62,7 @@
 								
 	                        	<div class="wizard-footer">
 	                            	<div class="pull-right"><input type='submit' class='btn btn-next btn-fill btn-danger btn-wd' name='weiter' value='weiter' /></div>
-	                                <div class="pull-left"></div>
+	                                <div class="pull-left"><a href="<?php echo getenv("HOMEPAGE_URL"); ?>" class="btn btn-info">Homepage</a></div>
 	                                <div class="clearfix"></div>
 	                        	</div>
 		                    </form>
