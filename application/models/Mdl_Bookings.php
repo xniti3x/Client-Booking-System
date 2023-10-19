@@ -18,7 +18,7 @@ class Mdl_Bookings extends CI_Model
     }
     
     public function get_companyData(){
-        return $this->db->query("SELECT * FROM `ip_users` where user_id=1")->row_array();
+        return $this->db->query("SELECT user_company,user_address_1,user_zip,user_city,user_web,user_subscribernumber,user_vat_id,user_email,user_iban,user_tax_code,user_phone FROM `ip_users` where user_id=1")->row_array();
     }
 
 }

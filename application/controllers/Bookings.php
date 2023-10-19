@@ -116,8 +116,8 @@ class Bookings extends CI_Controller
             $error_msg="Bitte füllen Sie den Firmennamen oder geben sie Ihr Vor-und Nachnamen ein.";
         }else if(empty($company["plz"]) || empty($company["strase"]) || empty($company["ort"]) ){
             $error_msg="Bitte Postleitzahl, Ort und Straße eingeben.";
-        }else if(empty($company["email"]) && empty($company["mob"])){
-            $error_msg="Bitte Email oder Tel.nummer eingeben.";
+        }else if(!filter_var($company["email"], FILTER_VALIDATE_EMAIL) && empty($company["mob"])){ 
+            $error_msg="Bitte gültige Email oder Rufnummer eingeben.";
         }else{
             if(!empty($company["vorname"]) && !empty($company["nachname"]) && empty($company["firma"]) ){
                 $company["firma"] = $company["vorname"]." ".$company["nachname"];
