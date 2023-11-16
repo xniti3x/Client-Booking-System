@@ -39,7 +39,7 @@
 									<table class="table align-middle mb-0 bg-white">
 										<thead class="bg-light">
 										  <tr>
-											<th>Kategorie</th>
+											<th>Beschreibung</th>
 											<th><i class="fa fa-user user"></i></th>
 											<th><i class="fa fa-user user"></i><i class="fa fa-user user"></i></th>
 											<th><i class="fa fa-user user"></i><i class="fa fa-user user"></i><i class="fa fa-user user"></i></th>
@@ -51,12 +51,8 @@
 											<?php if(!empty($response)){  foreach($response as $obj){ ?>
 										  <tr>
 											<td>
-												<div class="ms-4">
-												  <p class="fw-bold mb-1"><?php echo $obj->kategorie; ?></p>
-												</div>
-											  <div class="d-flex align-items-center"></div>
+												  <p class="text-justify"><?php echo $obj->kategorie; ?>  <?php echo !empty($obj->beschreibung)?"<br>".$obj->beschreibung:''; ?></p>
 											</td>
-											<!-- <td><p class="fw-normal mb-1"><?php echo $obj->beschreibung; ?></p></td> -->
 											<td>
 											  <div class="form-check">
 												<input class="form-check-input" type="radio" name="preis-<?php echo $obj->id; ?>" checked value="<?php echo $obj->preis1; ?>"/>€<?php echo $obj->preis1; ?>
@@ -66,7 +62,7 @@
 												<div class="form-check">
 													<?php  if(!empty($obj->preis2)){
 														?> 
-														<input class="form-check-input" type="radio" name="preis-<?php echo $obj->id; ?>" value="<?php echo $obj->preis2; ?>"/><?php echo $obj->preis2;
+														<input class="form-check-input" type="radio" name="preis-<?php echo $obj->id; ?>" value="<?php echo $obj->preis2; ?>"/>€<?php echo $obj->preis2;
 													} 
 														?>
 												</div>
@@ -75,7 +71,7 @@
 												<div class="form-check">
 													<?php  if(!empty($obj->preis3)){
 														?> 
-														<input class="form-check-input" type="radio" name="preis-<?php echo $obj->id; ?>" value="<?php echo $obj->preis3; ?>"/><?php echo $obj->preis3;
+														<input class="form-check-input" type="radio" name="preis-<?php echo $obj->id; ?>" value="<?php echo $obj->preis3; ?>"/>€<?php echo $obj->preis3;
 													} ?> 
 												</div>
 											</td>
